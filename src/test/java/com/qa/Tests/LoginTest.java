@@ -9,7 +9,7 @@ public class LoginTest extends BaseTest {
     public void TestWithValidCredentials(){
         HomePage hp;
         LoginPage lp = new LoginPage(driver);
-        hp = lp.LoginToSite("username","password");
+        hp = lp.LoginToSite("username@gmail.com","pass");
         hp.VerifyHomePage();
 
     }

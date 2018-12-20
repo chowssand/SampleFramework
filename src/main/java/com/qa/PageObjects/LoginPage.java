@@ -22,6 +22,9 @@ public class LoginPage extends InitializePageObject{
 
     public LoginPage(WebDriver driver) {
         super(driver);
+        if(!(userName.isDisplayed())){
+            throw new RuntimeException("Login Page is not Displayed!");
+        }
     }
 
     public HomePage LoginToSite(String uname, String pass){
