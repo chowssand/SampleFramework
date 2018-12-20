@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
@@ -21,6 +22,10 @@ public class BaseTest {
     @AfterClass
     public static void tearDown(){
         driver.close();
+    }
+    @BeforeMethod
+    public static void openURL(){
+        driver.get("http://www.facebook.com");
     }
 
 }
